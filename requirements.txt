@@ -1,0 +1,16 @@
+# Core bot functionality
+python-telegram-bot==20.8
+
+# Date parsing
+dateparser==1.2.0
+
+# Voice processing
+SpeechRecognition==3.10.0
+pydub==0.25.1
+
+# Environment variables
+python-dotenv==1.0.0
+
+# Additional dependencies for voice recognition
+PyAudio==0.2.13  # For microphone support
+google-api-python-client==2.108.0  # For Google Speech API 
