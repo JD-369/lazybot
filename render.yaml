@@ -1,0 +1,17 @@
+services:
+  - type: worker
+    name: telegram-voice-bot
+    env: python
+    buildCommand: |
+      apt-get update && apt-get install -y ffmpeg portaudio19-dev python3-dev
+      pip install -r requirements.txt
+    startCommand: python telegram_bot.py
+    plan: free
+    envVars:
+      - key: TOKEN
+        value: 8106464780:AAHsDB8gDtrG9Ls_LKGVCgjCGoNDPOj-fpo
+        sync: false
+      - key: DEBUG
+        value: false
+      - key: LOG_LEVEL
+        value: INFO 
